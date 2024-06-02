@@ -1,0 +1,500 @@
+* body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.div-centrado {
+    text-align: center;
+}
+
+.div-centrado img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color: #0080c4;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #dcb123;
+    color: rgb(0, 0, 0);
+}
+
+.navbar img {
+    height: 75px;
+    margin-right: 15px;
+}
+
+/* Botón de menú para fonos */
+.navbar-toggle {
+    display: none;
+    background-color: #333;
+    border: none;
+    color: #f2f2f2;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Media query para pantallas fonos */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+/* Carrousel con 4 imágenes */
+@keyframes display {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+.pic-ctn {
+    display: flex;
+    position: relative;
+    height: 300px;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.pic-ctn>img {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    width: 80%;
+    left: 10%;
+    animation: display 25s infinite;
+    border-radius: 10px;
+}
+
+
+.pic {
+    height: 300px;
+}
+
+img:nth-child(1) {
+    object-fit: cover;
+}
+
+img:nth-child(2) {
+    animation-delay: 5s;
+    object-fit: cover;
+}
+
+img:nth-child(3) {
+    animation-delay: 10s;
+    object-fit: cover;
+}
+
+img:nth-child(4) {
+    animation-delay: 15s;
+    object-fit: cover;
+}
+
+img:nth-child(5) {
+    animation-delay: 20s;
+    object-fit: cover;
+}
+
+.pic-ctn2 {
+    display: flex;
+
+    position: relative;
+    height: 100px;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.pic-ctn2>img {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    width: 100%;
+    left: 0%;
+    animation: display 25s infinite;
+    border-radius: 10px;
+}
+
+.pic2 {
+    height: 100px;
+}
+
+img:nth-child(1) {
+    object-fit: cover;
+}
+
+img:nth-child(2) {
+    animation-delay: 5s;
+    object-fit: cover;
+}
+
+img:nth-child(3) {
+    animation-delay: 10s;
+    object-fit: cover;
+}
+
+img:nth-child(4) {
+    animation-delay: 15s;
+    object-fit: cover;
+}
+
+img:nth-child(5) {
+    animation-delay: 20s;
+    object-fit: cover;
+}
+/* fin de carrousel con 4 imágenes */
+
+
+/* inicio footer*/
+footer {
+    background-color: #0080c4;
+    display: flex;
+    background-color: #0080c4;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: calc(100% - 4px);
+    position: relative;
+    bottom: 0;
+    position: bottom absolute;
+    margin: 2px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section iframe {
+    max-width: 100%;
+}
+
+.footer-section h3 {
+    margin-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer .social-icons a:hover {
+    color: #ff9c00;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        margin: 5px 0;
+    }
+
+
+}
+/*Fin Footer*/
+
+
+/* comienzo responsive modo tablet */
+@media all and (min-width:600px) and (max-width:1023px) {
+    .navbar {
+        justify-content: space-evenly;
+    }
+}
+
+/* fin repsonsive modo tablet */
+
+/* Formulario de Contacto*/
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Fin Formulario de Contacto*/
+
+
+/*Imagenes-container*/
+.image-container3 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.image-container img {
+    max-width: 90%;
+    /* Responsive tamaño */
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-container img {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container img {
+        flex: 1 1 100%;
+    }
+}
+
+/*Fin Imagenes-container*/
+
+/* Contenedor Imagenes hombres/mujeres/niñox*/
+
+.image-container2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.image-box {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(22, 22, 22);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(22, 22, 22);
+}
+
+.image-box img {
+    max-width: 90%;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-box p {
+    margin-top: 10px;
+}
+
+.image-box a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.image-box a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-box {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* FIN Contenedor Imagenes hombres/mujeres/niñox*/
+
+
+/*Productos hombre y mujer*/
+.products-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 20px;
+}
+
+.product {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0 0 20px rgb(22, 22, 22);
+}
+
+.product h3 {
+    color: rgb(94, 92, 91);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product p,
+.precio {
+    font-size: 15px;
+    color: rgb(15, 15, 14);
+}
+
+.precio {
+    font-weight: 800;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: black;
+    color: #dcb123;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 992px) {
+    .products-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Fin de productos hombre y mujer*/
